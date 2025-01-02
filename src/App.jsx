@@ -54,7 +54,7 @@ const App = () => {
   return (
     <div className={theme ? "main-container bg-dark" : "main-container"}>
       <Navbar theme={theme} changeTheme={changeTheme} />
-      <div className="container">
+      <div className="container" style={{ minHeight: "93vh" }}>
         <Dashboard transactions={transactions} />
         <Form
           addTransaction={addTransaction}
