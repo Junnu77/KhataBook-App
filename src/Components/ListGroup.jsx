@@ -1,9 +1,20 @@
 import React from "react";
 import ListItem from "./ListItem";
 
-const ListGroup = ({ transactions, deleteTransaction, editTransaction }) => {
+const ListGroup = ({
+  transactions,
+  deleteTransaction,
+  editTransaction,
+  theme,
+}) => {
   if (transactions.length === 0) {
-    return <h2 className="my-5 text-center">No Transactions Yet...</h2>;
+    return (
+      <h2
+        className={theme ? "my-5 text-center text-light" : "my-5 text-center"}
+      >
+        No Transactions Yet...
+      </h2>
+    );
   }
 
   return (

@@ -11,9 +11,7 @@ const App = () => {
     setTheme(theme ? false : true);
   };
 
-  const [transactions, setTransactions] = useState([
-    { id: 1, text: "Salary", amount: 500000, type: "income" },
-  ]);
+  const [transactions, setTransactions] = useState([]);
 
   const [edit, setEdit] = useState({ transaction: {}, isEdit: false });
 
@@ -65,6 +63,7 @@ const App = () => {
           transactions={transactions}
           deleteTransaction={deleteTransaction}
           editTransaction={editTransaction}
+          theme={theme}
         />
       </div>
     </div>
